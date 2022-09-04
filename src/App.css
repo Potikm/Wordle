@@ -1,16 +1,8 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  position: relative;
+  height: 100vh;
+  background-color: #282c34;
 }
 
 .App-header {
@@ -24,15 +16,184 @@
   color: white;
 }
 
+
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.Line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
 }
+
+.letter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 30px;
+}
+
+.gameOver{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  animation: show 1s;
+}
+
+.gameOverText{
+  color: white;
+
+
+}
+
+
+.errorMsg{
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  
+}
+
+.grid{
+  padding-top: 160px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.winner_img{
+  max-width: 2000px;
+  z-index: 10;
+}
+
+.hide{
+  animation: hide 0.5s;
+}
+
+.active{
+  border: 1px solid white;
+  animation: grow 0.2s;
+}
+
+.move{
+  animation: move 250ms ease-in-out;
+  
+}
+
+.themeImg{
+  max-width: 25px;
+}
+
+
+.switch{
+  display: flex;
+  position: absolute;
+  left: 90%;
+  top: 5%;
+}
+
+
+
+
+
+
+@keyframes move {
+  10%{
+    transform: translateX(-5%)
+  }
+  30%{
+    transform: translateX(5%)
+  }
+  50%{
+    transform: translateY(-7.5%)
+  }
+  70%{
+    transform: translateX(7.5%)
+  }
+  90%{
+    transform: translateX(5%)
+  }
+  100%{
+    transform: translateX(0%)
+  }
+
+}
+
+
+@keyframes grow {
+  20%{
+    transform: scale(1.1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  80%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes hide {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+
+}
+
+
+@keyframes show {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+
+
