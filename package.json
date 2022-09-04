@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Potikm.github.io/",
+  "homepage": "https://Potikm.github.io/wordle",
 
   "name": "wordle",
   
@@ -7,7 +7,7 @@
   
   "private": true,
   
-  "dependencies": {
+  "dependencies": { 
   
     
   "@testing-library/jest-dom": "^5.16.4",
