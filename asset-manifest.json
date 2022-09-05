@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.49e8c3cc.css",
-    "main.js": "/static/js/main.38a5805b.js",
-    "static/js/787.e01666d6.chunk.js": "/static/js/787.e01666d6.chunk.js",
-    "static/media/winner.png": "/static/media/winner.0cbd76268f9cb7b923ad.png",
-    "static/media/game-over.png": "/static/media/game-over.18375f3cb4fec19a8bf3.png",
-    "index.html": "/index.html",
-    "main.49e8c3cc.css.map": "/static/css/main.49e8c3cc.css.map",
-    "main.38a5805b.js.map": "/static/js/main.38a5805b.js.map",
-    "787.e01666d6.chunk.js.map": "/static/js/787.e01666d6.chunk.js.map"
+    "main.css": "/Wordle/static/css/main.49e8c3cc.css",
+    "main.js": "/Wordle/static/js/main.14e4453b.js",
+    "static/js/787.e01666d6.chunk.js": "/Wordle/static/js/787.e01666d6.chunk.js",
+    "static/media/winner.png": "/Wordle/static/media/winner.0cbd76268f9cb7b923ad.png",
+    "static/media/game-over.png": "/Wordle/static/media/game-over.18375f3cb4fec19a8bf3.png",
+    "index.html": "/Wordle/index.html",
+    "main.49e8c3cc.css.map": "/Wordle/static/css/main.49e8c3cc.css.map",
+    "main.14e4453b.js.map": "/Wordle/static/js/main.14e4453b.js.map",
+    "787.e01666d6.chunk.js.map": "/Wordle/static/js/787.e01666d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49e8c3cc.css",
-    "static/js/main.38a5805b.js"
+    "static/js/main.14e4453b.js"
   ]
 }
