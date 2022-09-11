@@ -133,7 +133,16 @@ function App() {
   }, [input])
 
 
-
+  const containGreen = (character, letters) => {
+    
+    for (let x = 0; x < 5; x++){
+      if (letters[x + active * 5].innerHTML === character && letters[x + active * 5].style.color === "green"){
+       
+        return true;
+      }
+    }
+    
+  }
 
 
   function isIsogram (str) {          // checks if input have 1+ same characters
@@ -155,7 +164,7 @@ function App() {
  
   const checkLine = () => { 
     var letters = document.querySelectorAll(".letter");
-    
+   
 
     var count = {};
     var chars = [];
@@ -167,7 +176,6 @@ function App() {
         count[char] = (count[char] || 0) + 1;
         })
       }
-     
      
       
       if (text[i - active * 5] !== letters[i].innerHTML){                // text[i] = i => 0 - 5   ||    active * 5 => 0 - 25
@@ -184,11 +192,11 @@ function App() {
             
               
             
-              if (letters[x + active * 5].innerHTML === letters[i].innerHTML && letters[x + active * 5].style.color !== ""){
+              if (letters[x + active * 5].innerHTML === letters[i].innerHTML && letters[x + active * 5].style.color !== "rgb(40, 44, 52)"){
                 letters[i].style.color = "red";
               }
 
-              if (letters[x + active * 5].innerHTML === letters[i].innerHTML && letters[x + active * 5].style.color === ""){
+              if (letters[x + active * 5].innerHTML === letters[i].innerHTML && letters[x + active * 5].style.color === "rgb(40, 44, 52)"){
                 letters[i].style.color = "orange";
                 
              
@@ -198,7 +206,13 @@ function App() {
                   return e === letters[i].innerHTML;
                 }).length > 1){
                  
-                  removeSame(letters[i], letters)             // removing surplus characters if text is Isogram
+                 
+                  if (containGreen(letters[i].innerHTML, letters) === true){
+                    removeSame(letters[i], letters)   // removing surplus characters if text is Isogram
+                  }
+                
+             
+                           
 
                  
                 }
@@ -290,7 +304,7 @@ function App() {
     const num = Math.floor(Math.random() * 12972);
     setText(Words[num]);
     
-    //setText('houff');
+    //setText('frays');
   }         
 
   const exist = (input) => {
@@ -328,7 +342,7 @@ function App() {
   return ( 
     <div className="App">
    
-    {gameOver && <GameOver win={win}/>}
+    {gameOver && <GameOver win={win} word={text}/>}
     <ErrorMsg/>
     <Button />
     <div className='switch'>
